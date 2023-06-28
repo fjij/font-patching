@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for filename in ./input-fonts/*.otf; do
+    fontforge -script ./FontPatcher/font-patcher -out ./output-fonts $filename
+done
