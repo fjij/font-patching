@@ -1,5 +1,18 @@
 #!/bin/bash
 
 for filename in ./input-fonts/*.otf; do
-    fontforge -script ./FontPatcher/font-patcher -out ./output-fonts $filename
+  fontforge -script ./FontPatcher/font-patcher \
+    --outputdir ./output-fonts \
+    --fontawesome \
+    --fontawesomeextension \
+    --fontlogos \
+    --octicons \
+    --codicons \
+    --powersymbols \
+    --pomicons \
+    --powerline \
+    --powerlineextra \
+    --materialdesignicons \
+    --weathericons \
+    $filename
 done
